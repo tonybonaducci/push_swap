@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmenezes <rmenezes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:51 by rmenezes          #+#    #+#             */
-/*   Updated: 2023/11/02 14:59:38 by rmenezes         ###   ########.fr       */
+/*   Updated: 2023/11/02 20:27:31 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,47 @@ int input_checker(char *av)
 	return (1);
 }
 
+void	add_node(t_node **stack, int n)
+{
+	t_stack_node	*node;
+	t_stack_node	*last_node;
+	
+	if (!stack)
+		return ;
+	node = malloc(sizeof(t_node));
+	if (!node)
+		return ;
+	node->next = NULL;
+	node->nbr = n;
+	if (!(*stack))
+	{
+		*stack = node;
+		node->prev = NULL;
+	}
+	else
+	{
+		last_node = find_last(*stack);
+		last_node->next = node;
+		node->prev = last_node;		
+	}	
+}
 
-int	init_stack(t_node	**a, char **av)
+int	init_stack_a(t_node	**a, char **av)
 {
 	int		i;
-	long 	n;
+	long 	nbr;
 
 	i = 0;
 	while (av[i])
 	{
 		if (!input_checker(av[i]));
 			free_stack(av); //TODO
-		n = ft_atol(av[i]); // TODO
+		nbr = ft_atol(av[i]); // TODO
 	}
-	if (n > INT_MAX || n < INT_MIN)
+	if (nbr > INT_MAX || nbr < INT_MIN)
 		free_stack(a);
-	add_node(a, (int)n); //TODO
+	if (dup_error(*a, (int)n));
+		free_stack(a);
+	add_node(a, (int)nbr); //TODO
 	i++;
 }
