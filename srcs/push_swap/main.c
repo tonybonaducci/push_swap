@@ -6,13 +6,13 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:44:30 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 20:58:05 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/12 23:54:18 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/inc/libft.h"
 #include "libft/inc/ft_printf.h"
-#include "../inc/push_swap.h"
+#include "../../inc/push_swap.h"
 
 int	main(int ac, char **av)
 {

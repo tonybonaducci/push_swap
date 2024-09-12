@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_manager.c                                    :+:      :+:    :+:   */
+/*   a_stack_manager.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:28:10 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 21:07:14 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/12 22:26:25 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,4 +121,13 @@ void	prep_for_push(t_node **stack,
 				rrb(stack,false);
 		}
 	}
+}
+
+void	refresh_nodes_a(t_stack_node *a, t_stack_node *b)
+{
+	current_index(a);
+	current_index(b);
+	set_target_a(a, b);
+	cost_math_a(a,b);
+	set_cheapest(a);	
 }

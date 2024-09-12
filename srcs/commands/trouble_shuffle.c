@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:35:15 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 20:22:50 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/12 23:34:33 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	a_to_b(t_node **a, t_node **b)
 {
 	t_node *cheapest_node;
-	
+
 	cheapest_node = get_cheapest(*a);
 	if (cheapest_node->above_med && cheapest_node->target_node->above_med)
 		double_rotate(a, b, cheapest_node);

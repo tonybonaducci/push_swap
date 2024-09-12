@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:51 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 21:14:20 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/12 23:42:20 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static	long	ft_atol(const char *str)
 	int	i;
 	int	res;
 	int	posneg;
-
+	
 	i = 0;
 	res = 0;
 	posneg = 1;
@@ -38,20 +38,6 @@ static	long	ft_atol(const char *str)
 	return (res * posneg);
 }
 
-
-int input_checker(char *av)
-{
-	int	i;
-
-	i = 0;
-	while (av[i])
-	{
-		if (!ft_isdigit(&av[i]));
-			return (0);
-		i++;
-	}
-	return (1);
-}
 
 bool	stack_sorted(t_node *stack)
 {
