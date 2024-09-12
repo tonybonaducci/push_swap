@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:51 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 23:42:20 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 00:09:05 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	add_node(t_node **stack, int n)
 	}
 	else
 	{
-		last_node = find_last(*stack);
+		last_node = last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}

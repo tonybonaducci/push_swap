@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:30:00 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 22:38:20 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 00:07:02 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ static void push(t_node **dest, t_node **src)
 	
 	if (!*src)
 		return ;
-	push_node = *src;
+	pushed = *src;
 	*src = (*src)->next;
 	if (*src)
 		(*src)->prev = NULL;
 	if (!*dest)
 	{
-		*dest = push_node;
-		push_node->next = NULL;
+		*dest = pushed;
+		pushed->next = NULL;
 	}
 	else
 	{

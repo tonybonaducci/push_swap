@@ -9,7 +9,7 @@ void	simple_sort(t_node **a)
 		ra (a, false);
 	else if ((*a)->next == biggest_node)
 		rra(a, false);
-		if ((*a)->val > (*a)->next->val)
+	if ((*a)->val > (*a)->next->val)
 			sa(a, false);
 }
 

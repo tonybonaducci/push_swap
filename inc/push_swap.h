@@ -6,15 +6,15 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:00:38 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 23:41:34 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 00:05:05 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/inc/libft.h"
-# include "libft/inc/ft_printf.h"
+# include "../libft/inc/libft.h"
+# include "../libft/inc/ft_printf.h"
 # include <limits.h>
 # include <stdbool.h>
 
