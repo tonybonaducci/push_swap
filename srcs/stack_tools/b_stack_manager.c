@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 20:16:17 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 20:45:51 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:19:41 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ void	init_nodes_b(t_node *a, t_node *b)
 {
 	current_index(a);
 	current_index(b);
-	set_target_b(a, b);
+	get_target_b(a, b);
 }

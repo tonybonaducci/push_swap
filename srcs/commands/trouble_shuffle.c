@@ -6,10 +6,13 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:35:15 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 23:34:33 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:12:39 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
+/*
 #include "../../inc/push_swap.h"
 
 static void	a_to_b(t_node **a, t_node **b)
@@ -43,3 +46,5 @@ static void	min_on_top(t_node **a)
 			rra(a, false);
 	}
 }
+
+*/

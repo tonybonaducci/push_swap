@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:39:03 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/13 00:09:05 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:24:09 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void rev_rotate(t_node **stack)
 
 	if(!*stack || !(*stack)->next)
 		return ;
-	last = last_node(*stack);
+	last = get_last_node(*stack);
 	last->prev->next = NULL;
 	last->prev = *stack;
 	last->prev = NULL;

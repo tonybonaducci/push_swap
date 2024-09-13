@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:51 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/13 00:09:05 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:33:08 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ bool	stack_sorted(t_node *stack)
 			return (false);
 		stack = stack->next;
 	}
-	retrun (true);
+	return (true);
 }
 
 void	add_node(t_node **stack, int n)
@@ -71,13 +71,13 @@ void	add_node(t_node **stack, int n)
 	}
 	else
 	{
-		last_node = last_node(*stack);
+		last_node = get_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}
 }
 
-int	init_stack_a(t_node	**a, char **av)
+void	init_stack_a(t_node	**a, char **av)
 {
 	int		i;
 	long 	nbr;
@@ -85,19 +85,32 @@ int	init_stack_a(t_node	**a, char **av)
 	i = 0;
 	while (av[i])
 	{
-		if (!input_checker(av[i]));
+		if (!input_checker(av[i]))
 			free_stack(a);
 		nbr = ft_atol(av[i]); // TODO
 	}
 	if (nbr > INT_MAX || nbr < INT_MIN)
 		free_stack(a);
-	if (duplicate_check(*a, (int)nbr));
+	if (duplicate_check(*a, (int)nbr))
 		free_stack(a);
 	add_node(a, (int)nbr); 
 	i++;
 }
 
-t_node *last_node(t_node *stack)
+t_node *get_cheapest(t_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
+
+t_node *get_last_node(t_node *stack)
 {
 	if (!stack)
 		return (NULL);

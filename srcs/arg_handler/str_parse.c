@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 20:49:52 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 20:55:43 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:19:48 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,13 @@ int input_checker(char *av)
 	int	i;
 
 	i = 0;
+	if (!(av[i] == '+' || av[i] == '-' || (av[i] >= '0' && av[i] <= '9')))
+		return (0);
+	if ((av[i] == '+' || av[i] == '-') && !(av[1] >= '0' && av[1] <= '9'))
+		return (0);
 	while (av[i])
 	{
-		if (!ft_isdigit(&av[i]));
+		if (!ft_isdigit(av[i]))
 			return (0);
 		i++;
 	}

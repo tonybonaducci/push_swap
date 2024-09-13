@@ -14,15 +14,16 @@ COMMANDS_DIR	=	$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/rotate.c \
 						$(SRC_DIR)commands/sort_algos.c \
 						$(SRC_DIR)commands/swap.c \
-						$(SRC_DIR)commands/trouble_shuffle.c
 
 STACK_TOOLS_DIR	=	$(SRC_DIR)stack_tools/a_stack_manager.c \
 						$(SRC_DIR)stack_tools/b_stack_manager.c \
 						$(SRC_DIR)stack_tools/stack_utils.c
 
+ARG_HANDLER_DIR	=	$(SRC_DIR)arg_handler/str_parse.c
+
 PUSH_SWAP_DIR = 			$(SRC_DIR)push_swap/main.c
 
-SRCS			= $(COMMANDS_DIR) $(STACK_TOOLS_DIR) $(PUSH_SWAP_DIR)
+SRCS			= $(COMMANDS_DIR) $(STACK_TOOLS_DIR) $(PUSH_SWAP_DIR) $(ARG_HANDLER_DIR)
 
 OBJ				= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 

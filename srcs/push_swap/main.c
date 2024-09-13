@@ -6,12 +6,10 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:44:30 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 23:54:18 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:10:10 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/inc/libft.h"
-#include "libft/inc/ft_printf.h"
 #include "../../inc/push_swap.h"
 
 int	main(int ac, char **av)
@@ -33,7 +31,7 @@ int	main(int ac, char **av)
 		else if (stack_len(a) == 3)
 			simple_sort(&a);
 		else
-			sort_stacks(&a, &b);
+			complex_sort(&a, &b);
 	}
 	free_stack(&a);
 	return (0);

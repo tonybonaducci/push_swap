@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:00:38 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/13 00:05:05 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:09:18 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,13 @@ void	current_index(t_node *stack);
 void	init_nodes_b(t_node *a, t_node *b);
 bool	stack_sorted(t_node *stack);
 void	add_node(t_node **stack, int n);
-int		init_stack_a(t_node	**a, char **av);
-t_node *last_node(t_node *stack);
+void		init_stack_a(t_node	**a, char **av);
+t_node *get_last_node(t_node *stack);
 int	stack_len(t_node *stack);
 t_node	*find_max(t_node *stack);
 t_node *find_min(t_node *stack);
 void	refresh_nodes_a(t_node *a, t_node *b);
+t_node *get_cheapest(t_node *stack);
 
 
 #endif

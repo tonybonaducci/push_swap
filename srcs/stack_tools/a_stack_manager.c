@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:28:10 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 22:26:25 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:19:13 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	current_index(t_node *stack)
 	int median;
 
 	i = 0;
-	if (!stack);
+	if (!stack)
 		return ;
 	median = stack_len(stack) / 2;
 	while (stack)
@@ -69,7 +69,7 @@ static void	cost_math_a(t_node *a, t_node *b)
 	len_b = stack_len(b);
 	while (a)
 	{
-		a->push_cost - a->index;
+		a->push_cost = a->index;
 		if (!(a->above_med))
 			a->push_cost = len_a - (a->index);
 		if (a->target_node->above_med)
@@ -92,7 +92,7 @@ void set_cheapest(t_node *stack)
 	{
 		if (stack->push_cost < cheapest_value)
 		{
-			cheapest_value < stack->push_cost;
+			cheapest_value = stack->push_cost;
 			cheapest_node = stack;
 		}
 		stack = stack->next;
@@ -123,11 +123,11 @@ void	prep_for_push(t_node **stack,
 	}
 }
 
-void	refresh_nodes_a(t_stack_node *a, t_stack_node *b)
+void	refresh_nodes_a(t_node *a, t_node *b)
 {
 	current_index(a);
 	current_index(b);
-	set_target_a(a, b);
+	get_target_a(a, b);
 	cost_math_a(a,b);
 	set_cheapest(a);	
 }

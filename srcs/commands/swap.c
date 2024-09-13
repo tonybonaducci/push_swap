@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:50:56 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/12 23:32:55 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:10:44 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	swap(t_node **head)
 
 void	sa(t_node **a, bool print)
 {
-	swap(a)
+	swap(a);
 	if (!print)
 		ft_printf("sa\n");
 }
