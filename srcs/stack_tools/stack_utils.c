@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:51 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/13 16:33:08 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 20:47:49 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,14 @@ void	init_stack_a(t_node	**a, char **av)
 		if (!input_checker(av[i]))
 			free_stack(a);
 		nbr = ft_atol(av[i]); // TODO
+	
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			free_stack(a);
+		if (duplicate_check(*a, (int)nbr))
+			free_stack(a);
+		add_node(a, (int)nbr); 
+		i++;
 	}
-	if (nbr > INT_MAX || nbr < INT_MIN)
-		free_stack(a);
-	if (duplicate_check(*a, (int)nbr))
-		free_stack(a);
-	add_node(a, (int)nbr); 
-	i++;
 }
 
 t_node *get_cheapest(t_node *stack)

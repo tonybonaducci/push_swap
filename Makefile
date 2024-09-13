@@ -6,7 +6,7 @@ SRC_DIR = srcs/
 OBJ_DIR = obj/
 
 CC	= gcc
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror -g -I
 RM = rm -f
 
 COMMANDS_DIR	=	$(SRC_DIR)commands/push.c \

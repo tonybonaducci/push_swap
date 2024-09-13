@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 20:49:52 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/13 17:19:48 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:36:55 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int input_checker(char *av)
 		return (0);
 	if ((av[i] == '+' || av[i] == '-') && !(av[1] >= '0' && av[1] <= '9'))
 		return (0);
+	i++;
 	while (av[i])
 	{
 		if (!ft_isdigit(av[i]))
@@ -46,7 +47,7 @@ int	duplicate_check(t_node *a, int n)
 void free_error(t_node **a)
 {
 	free_stack(a);
-	ft_printf("Input Error\n");
+	ft_printf("Error\n");
 	exit(1);
 }
 
