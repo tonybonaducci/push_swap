@@ -6,7 +6,7 @@
 /*   By: rmenezes <rmenezes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:44:30 by rmenezes          #+#    #+#             */
-/*   Updated: 2024/09/19 23:15:40 by rmenezes         ###   ########.fr       */
+/*   Updated: 2024/09/20 02:15:47 by rmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ int	main(int ac, char **av)
 			simple_sort(&a);
 		else
 			complex_sort(&a, &b);
+	}
+	while (a)
+	{
+		printf("%d \n", a->val);
+		a = a->next;
 	}
 	free_stack(&a);
 	return (0);
